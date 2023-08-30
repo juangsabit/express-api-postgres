@@ -16,7 +16,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "------> Run application <------"
-                sh 'node server.js '
+                sh 'node server.js &'
             }
         }
     }
