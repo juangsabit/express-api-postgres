@@ -5,6 +5,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "------> Install node modules <------"
+                sh 'git pull'
                 sh 'npm install'
             }
         }
