@@ -17,8 +17,8 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "------> Run application <------"
-                sh ./run.sh
             }
+            sh ./run.sh
         }
     }
     
