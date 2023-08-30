@@ -7,7 +7,7 @@ pipeline {
                 echo "------> Install node modules <------"
                 sh 'git pull https://github.com/juangsabit/express-api-postgres.git master'
                 sh 'kill $(lsof -t -i:8080)'
-                sh 'npm install'
+                sh 'npm install forever -g'
             }
         }
         stage("Test") {
@@ -18,7 +18,7 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "------> Run application <------"
-                sh 'nohup node server.js &'
+                sh 'forever start server.js'
             }
         }
     }
