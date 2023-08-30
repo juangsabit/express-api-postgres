@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "------> Install node modules <------"
                 sh 'git pull https://github.com/juangsabit/express-api-postgres.git master'
+                sh 'kill $(lsof -t -i:8080)'
                 sh 'npm install'
             }
         }
