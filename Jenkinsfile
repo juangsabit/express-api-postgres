@@ -5,7 +5,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "------> Install node modules <------"
-                sh 'git pull'
+                sh 'git pull https://github.com/juangsabit/express-api-postgres.git master'
                 sh 'npm install'
             }
         }
