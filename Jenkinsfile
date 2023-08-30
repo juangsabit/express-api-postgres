@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo "------> Install node modules <------"
                 sh 'git pull https://github.com/juangsabit/express-api-postgres.git master'
+                sh 'kill $(lsof -t -i:8080)'
                 sh 'npm install'
             }
         }
@@ -17,8 +18,8 @@ pipeline {
         stage("Deploy") {
             steps {
                 echo "------> Run application <------"
+                sh 'nohup node server.js &'
             }
-            sh ./run
         }
     }
     
