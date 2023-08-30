@@ -3,7 +3,7 @@ module.exports = {
     USER: "juang",
     PASSWORD: "juang123",
     DB: "api-express",
-    dialect: "postgres",
+    dialect: "juang",
     pool: {
       max: 5,
       min: 0,
