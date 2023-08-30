@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "------> Run application <------"
             }
-            sh ./run.sh
+            sh ./run
         }
     }
     
