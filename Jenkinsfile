@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage("Build") {
             steps {
-                echo "Hello Build"
+                echo "------> Install node modules <------"
+                sh 'npm install'
             }
         }
         stage("Test") {
@@ -14,7 +15,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                echo "Hello Deploy"
+                echo "------> Run application <------"
+                sh 'node server.js '
             }
         }
     }
