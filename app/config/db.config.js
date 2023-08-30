@@ -1,6 +1,6 @@
 module.exports = {
     HOST: "localhost",
-    USER: "postgres",
+    USER: "juang",
     PASSWORD: "juang123",
     DB: "api-express",
     dialect: "postgres",
